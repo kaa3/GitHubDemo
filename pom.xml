@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+		<parent>
+			<groupId>com.macys.web.portal</groupId>
+			<artifactId>MASSParent</artifactId>
+			<version>1.12.0-SNAPSHOT</version>
+		</parent>	
+		
+    <artifactId>MASS</artifactId>
+    <packaging>war</packaging>
+    <name>PORTAL :: MASS :: ${project.artifactId}</name>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.macys.platform</groupId>
+            <artifactId>ui.util</artifactId>
+        </dependency>
+		<dependency>
+			<groupId>com.macys.cas</groupId>
+			<artifactId>cas.authorization.spring3</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.macys.cas</groupId>
+			<artifactId>cas.authorization.api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.macys.web.portal</groupId>
+			<artifactId>EcomUtils</artifactId>
+		</dependency>
+
+		        <!-- KillSwitch Service -->
+        <dependency>
+            <groupId>com.macys.web.portal</groupId>
+            <artifactId>KillSwitchCore</artifactId>
+        </dependency>		
+        <dependency>
+            <groupId>com.macys.platform</groupId>
+            <artifactId>management.service.api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.macys.platform</groupId>
+            <artifactId>management.service.pnp.api</artifactId>
+        </dependency>				
+        <!--UserProfileService-->
+        <dependency>
+            <groupId>com.macys.platform</groupId>
+            <artifactId>userprofile.service.api</artifactId>
+        </dependency>
+
+        <!--ShoppingbagService-->
+        <dependency>
+            <groupId>com.macys.platform</groupId>
+            <artifactId>shoppingbag.service.api</artifactId>
+        </dependency>
+
+        <!--ExternalServiceStatus-->
+        <dependency>
+            <groupId>com.macys.platform</groupId>
+            <artifactId>externalservice.util.api</artifactId>
+        </dependency>
+
+        <!--RegistryService-->
+        <dependency>
+            <groupId>com.macys.platform</groupId>
+            <artifactId>registry.service.api</artifactId>
+        </dependency>
+
+        <!-- Work controller -->
+        <dependency>
+            <groupId>com.macys.platform</groupId>
+            <artifactId>workcontroller.scheduler.api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.macys.platform</groupId>
+            <artifactId>cluster.info.util</artifactId>
+        </dependency>
+
+        <!-- Nav App Catalog Purge Service -->
+        <dependency>
+            <groupId>com.macys.nav.common</groupId>
+            <artifactId>CatalogPurgeService</artifactId>
+        </dependency>
+
+        <!-- Keywordsearch Service -->
+        <dependency>
+            <groupId>com.macys.platform</groupId>
+            <artifactId>keywordsearch2.api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.macys.platform</groupId>
+            <artifactId>keywordsearch3.api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.macys.platform</groupId>
+            <artifactId>kws.provider.api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.macys.platform</groupId>
+            <artifactId>customdate.util.impl</artifactId>
+        </dependency>
+        <!-- NavApp Log Management Service -->
+        <dependency>
+            <groupId>com.macys.nav.common</groupId>
+            <artifactId>navapp-management-service-api</artifactId>
+        </dependency> 
+         <dependency>
+            <groupId>com.macys.platform</groupId>
+            <artifactId>ems.client</artifactId>
+        </dependency>
+		<dependency>
+            <groupId>com.macys.platform</groupId>
+            <artifactId>ems.store</artifactId>
+        </dependency>
+         <dependency>
+	    <groupId>com.sun.jersey</groupId>
+	    <artifactId>jersey-client</artifactId>
+        </dependency>
+        <!-- LinkModule Integration Service -->
+        <dependency>
+            <groupId>com.macys.seo</groupId>
+            <artifactId>LinkModuleIntegrationService</artifactId>
+        </dependency>
+
+        <!-- SDP APIs -->
+        <dependency>
+            <groupId>com.macys.platform</groupId>
+            <artifactId>integration.datarepair.adapter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.macys.platform</groupId>
+            <artifactId>job.status.service.api</artifactId>
+        </dependency>
+
+        <!-- SDP service inspection and availability -->
+        <dependency>
+            <groupId>com.macys.platform</groupId>
+            <artifactId>media.service.api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.macys.platform</groupId>
+            <artifactId>media.admin.service.api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.macys.platform</groupId>
+            <artifactId>navigation.api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.macys.platform</groupId>
+            <artifactId>catalog.provider.api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.macys.platform</groupId>
+            <artifactId>catalog.provider.internal.api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.macys.platform</groupId>
+            <artifactId>catalog.provider.sorting.api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.macys.platform</groupId>
+            <artifactId>review.service.api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.macys.platform</groupId>
+            <artifactId>international.shipping.service.api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.macys.platform</groupId>
+            <artifactId>hessian.clientid.util</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.macys.platform</groupId>
+            <artifactId>messaging.delphi.integration.api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.macys.platform</groupId>
+            <artifactId>AppJobIntegrationAPI</artifactId>
+        </dependency>
+        
+         <!--Wallet.util.Api-->
+        <dependency>
+            <groupId>com.macys.platform</groupId>
+            <artifactId>wallet.util.api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.macys.platform</groupId>
+            <artifactId>customer.provider.api</artifactId>
+        </dependency>
+
+        <!-- Logging -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-jdk14</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+        </dependency>
+        <!-- ******* -->
+
+        <dependency>
+            <groupId>javax.annotation</groupId>
+            <artifactId>jsr250-api</artifactId>
+            <version>${javax.annotation.version}</version>
+        </dependency>
+
+        <!-- Spring framework -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-oxm</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+        </dependency>
+        <!-- **************** -->
+
+        <!-- AspectJ -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+        </dependency>
+        <!-- ******* -->
+
+        <!-- Spring Security -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>${org.springframework.security.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>${org.springframework.security.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>${org.springframework.security.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-taglibs</artifactId>
+            <version>${org.springframework.security.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-cas-client</artifactId>
+            <version>${org.springframework.security.version}</version>
+        </dependency>
+        <!-- *************** -->
+
+        <dependency>
+            <groupId>com.thoughtworks.xstream</groupId>
+            <artifactId>xstream</artifactId>
+            <version>1.3.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+        </dependency>
+        <!-- ************************************************************************************************************** -->
+
+        <!-- Google Gson 2 -->
+
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+        </dependency>
+
+        <!-- Apache Tiles 2 -->
+        <dependency>
+            <groupId>taglibs</groupId>
+            <artifactId>standard</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.tiles</groupId>
+            <artifactId>tiles-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.tiles</groupId>
+            <artifactId>tiles-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.tiles</groupId>
+            <artifactId>tiles-jsp</artifactId>
+        </dependency>
+        <!-- ************** -->
+
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib-nodep</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.caucho</groupId>
+            <artifactId>hessian</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+        </dependency>
+
+        <!-- Jetty for local run -->
+        <dependency>
+            <groupId>org.mortbay.jetty</groupId>
+            <artifactId>jetty</artifactId>
+            <version>6.1.22</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>jasper</artifactId>
+            <version>6.0.26</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>tomcat</groupId>
+            <artifactId>naming-resources</artifactId>
+            <version>5.5.23</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>tomcat</groupId>
+            <artifactId>naming-factory</artifactId>
+            <version>5.5.23</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- ******************* -->
+
+        <!-- test dependencies -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.ehoffman</groupId>
+            <artifactId>TestNG-Extensions</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.macys.hub.log</groupId>
+            <artifactId>LogMgmtServiceAPI</artifactId>
+        </dependency>
+
+		<dependency>
+           <groupId>org.codehaus.jackson</groupId>
+           <artifactId>jackson-xc</artifactId>
+       </dependency>
+
+
+        <dependency>
+            <groupId>com.macys.platform</groupId>
+            <artifactId>rest.framework.server.internal</artifactId>
+        </dependency>
+		
+		<dependency>
+            <groupId>com.macys.platform</groupId>
+            <artifactId>change.notification.api</artifactId>
+        </dependency>
+
+        <!-- BrowseDemoUi, Catalog Navigation Service -->
+        <dependency>
+            <groupId>com.macys.platform</groupId>
+            <artifactId>modular.catalog.provider.api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.splunk</groupId>
+            <artifactId>splunk</artifactId>
+        </dependency>
+    </dependencies>		
+
+    <profiles>
+        <profile>
+            <id>debug.tools</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>com.macys</groupId>
+                    <artifactId>jython.web</artifactId>
+                    <version>2.2.5</version>
+                    <type>war</type>
+                    <scope>compile</scope>
+                </dependency>
+                <dependency>
+                    <groupId>com.macys</groupId>
+                    <artifactId>jamon.web</artifactId>
+                    <version>1.0.1</version>
+                    <type>war</type>
+                    <scope>compile</scope>
+                </dependency>
+                <dependency>
+                    <groupId>oro</groupId>
+                    <artifactId>oro</artifactId>
+                    <version>2.0.8</version>
+                    <scope>compile</scope>
+                </dependency>
+                <dependency>
+                    <groupId>com.ibm.db2</groupId>
+                    <artifactId>db2-jcc-4</artifactId>
+                    <scope>compile</scope>
+                </dependency>
+                <dependency>
+                    <groupId>com.ibm.db2</groupId>
+                    <artifactId>db2-jcc-license-4</artifactId>
+                    <scope>compile</scope>
+                </dependency>                                
+            </dependencies>
+        </profile>        
+    </profiles>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifestEntries>
+                            <Mass-Version>${version}</Mass-Version>
+                            <Required-Sdp-Version>${Required-Sdp-Version}</Required-Sdp-Version>
+                            <Required-Mobile-Sdp-Version>${Required-Mobile-Sdp-Version}</Required-Mobile-Sdp-Version>
+                            <Web-ContextPath>/mass</Web-ContextPath>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
